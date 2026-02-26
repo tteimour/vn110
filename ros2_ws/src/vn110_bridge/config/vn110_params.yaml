@@ -1,0 +1,58 @@
+vn110_bridge:
+  ros__parameters:
+    # Connection
+    port: "/dev/ttyUSB0"
+    baudrate: 921600
+    ahrs_rate: 200
+
+    # VPE Basic Control
+    # heading_mode: 0=Absolute, 1=Relative, 2=Indoor
+    # filtering_mode: 0=Unfiltered, 1=AdaptivelyFiltered
+    # tuning_mode: 0=Static, 1=Adaptive
+    vpe_heading_mode: 0
+    vpe_filtering_mode: 1
+    vpe_tuning_mode: 1
+
+    # Real Time HSI Control (Register 44)
+    # mode: 0=Off, 1=Run, 2=Reset
+    # converge_rate: 1-5 (1=slow, 5=fast)
+    hsi_mode: 0
+    hsi_apply_compensation: false
+    hsi_converge_rate: 5
+    hsi_poll_interval: 2.0              # seconds between Register 47 polls when HSI is running
+    hsi_convergence_threshold: 1e-5    # max param change to consider stable (tune as needed)
+
+    # Velocity Aiding 
+    velocity_aiding_enabled: true
+    velocity_uncertainty: 0.1       # 0.001 to 10.0 m/s
+    velocity_aiding_threshold: 5.0
+
+    # Initial Heading (degrees)
+    # Set to desired heading value to apply it to the sensor
+    # Use .nan (or leave unset) to skip setting initial heading
+    initial_heading: .nan
+
+    # World Magnetic and Gravity Model
+    world_model_enabled: true
+    world_model_latitude: 40.39902773164882
+    world_model_longitude: 49.810675268672234
+    world_model_altitude: 0.0
+
+    # Reference Frame Rotation (Register 26)
+    # DCM matrix (row-major):
+    # [0 0 -1; -1 0 0; 0 1 0] means:
+    #   vehicle +X = sensor -Z
+    #   vehicle +Y = sensor -X
+    #   vehicle +Z = sensor +Y
+    ref_frame_rot_00: 0.0
+    ref_frame_rot_01: 0.0
+    ref_frame_rot_02: -1.0
+    ref_frame_rot_10: -1.0
+    ref_frame_rot_11: 0.0
+    ref_frame_rot_12: 0.0
+    ref_frame_rot_20: 0.0
+    ref_frame_rot_21: 1.0
+    ref_frame_rot_22: 0.0
+
+    # Dead Reckoning
+    deadreckoning_enabled: false

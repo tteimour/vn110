@@ -1,0 +1,77 @@
+# ROS2 build artifacts
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+ros2_ws/src/install/
+
+# VectorNav SDK build artifacts
+vnsdk-1-0-0/cpp/build/
+vnsdk-1-0-0/cpp/examples/*/build/
+vnsdk-1-0-0/cpp/examples/*/*/build/
+vnsdk-1-0-0/cpp/plugins/ros2/build/
+vnsdk-1-0-0/cpp/plugins/ros2/install/
+vnsdk-1-0-0/cpp/plugins/ros2/log/
+vnsdk-1-0-0/python/build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# C/C++ compiled objects
+*.o
+*.a
+*.out
+*.obj
+*.exe
+*.dll
+*.dylib
+
+# IDE and editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.cproject
+.settings/
+
+# Claude Code
+.claude/
+
+# Logs
+*.log
+log/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+install_manifest.txt
+
+# colcon
+colcon.meta
+COLCON_IGNORE
