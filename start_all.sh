@@ -18,7 +18,7 @@ ros2 daemon start
 
 sleep 2
 
-source ~/ros2_ws/install/setup.bash
+source ~/vn110_node/install/setup.bash
 MicroXRCEAgent serial --dev $UXRCE_PORT -b 1000000 &
 
 UXRCE_PID=$!

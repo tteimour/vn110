@@ -1,8 +1,9 @@
 # ROS2 build artifacts
-ros2_ws/build/
-ros2_ws/install/
-ros2_ws/log/
-ros2_ws/src/install/
+vn110_node/build/
+vn110_node/install/
+vn110_node/log/
+vn110_node/src/install/
+ros2_ws/
 
 # VectorNav SDK build artifacts
 vnsdk-1-0-0/cpp/build/
