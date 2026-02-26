@@ -13,7 +13,7 @@ find_package(geometry_msgs REQUIRED)
 find_package(px4_msgs REQUIRED)
 find_package(ament_index_cpp REQUIRED)
 
-set(VNSDK_PATH "$ENV{HOME}/git/Vectornav/vnsdk-1-0-0/cpp" CACHE PATH "Path to VectorNav SDK")
+set(VNSDK_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../../vnsdk" CACHE PATH "Path to VectorNav SDK")
 message(STATUS "Using VectorNav SDK at: ${VNSDK_PATH}")
 
 file(GLOB_RECURSE VNSDK_SOURCES
